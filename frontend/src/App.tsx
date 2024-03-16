@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import BowlerList from './Bowler/BowlerList';
 
+//runs the app
 function App() {
   return (
     <div className="App">

@@ -1,5 +1,6 @@
 import logo from './logo.png';
 
+//creates the header
 function Header(props: any) {
   return (
     <header className="row header navbar navbar-dark bg-dark">
