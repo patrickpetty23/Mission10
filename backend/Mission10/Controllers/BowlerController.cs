@@ -23,6 +23,7 @@ namespace Mission10.Controllers
         {
             var query = (from bowler in _context.Bowlers
                                               join team in _context.Teams on bowler.TeamId equals team.TeamId
+                                              where team.TeamName == "Marlins" || team.TeamName == "Sharks"
                                               select new Bowler
                                               {
                                                   BowlerId = bowler.BowlerId,
