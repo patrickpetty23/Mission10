@@ -1,13 +1,14 @@
 ﻿// Import necessary libraries
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 
 // Define the BowlerContext class
 namespace Mission10.Data
 {
     // Partial class extending DbContext to manage database operations
-    public partial class BowlerContext : DbContext
+    public partial class BowlerContext : Microsoft.EntityFrameworkCore.DbContext
     {
         // Default constructor
         public BowlerContext()
@@ -21,10 +22,10 @@ namespace Mission10.Data
         }
 
         // Define a DbSet for the Bowlers table
-        public virtual DbSet<Bowler> Bowlers { get; set; }
+        public virtual System.Data.Entity.DbSet<Bowler> Bowlers { get; set; }
         
         // Define a DbSet for the Teams table
-        public virtual DbSet<Team> Teams { get; set; }
+        public virtual System.Data.Entity.DbSet<Team> Teams { get; set; }
 
         // Method to configure the database connection
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
